@@ -9,7 +9,7 @@ def exists(filename: str) -> bool:
 
 def file_exists(filename: str) -> bool:
     f = Path(filename)
-    return p.is_file()
+    return f.is_file()
 
 
 def dir_exists(dirname: str) -> bool:
