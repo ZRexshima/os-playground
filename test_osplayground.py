@@ -4,6 +4,7 @@ from osplayground import file_exists
 
 
 def test_file_exists(tmp_path):
+    # create a temporary file and write text into it
     f = tmp_path / 'fake-file.txt'
     f.write_text('fake fake fake')
     
@@ -13,6 +14,7 @@ def test_file_exists(tmp_path):
 
 
 def test_dir_exists(tmp_path):
+    # create a temporary directory
     d = tmp_path / 'dir'
     d.mkdir()
     
@@ -22,6 +24,7 @@ def test_dir_exists(tmp_path):
 
 
 def test_exists_with_dir(tmp_path):
+    # create a temporary directory
     d = tmp_path / 'test_dir'
     d.mkdir()
 
@@ -30,6 +33,7 @@ def test_exists_with_dir(tmp_path):
     assert d.is_dir() is True
 
 def test_exists_with_file(tmp_path):
+    # create a temporary file and write text into it
     f = tmp_path / 'test.txt'
     f.write_text('blah blah blah')
 
