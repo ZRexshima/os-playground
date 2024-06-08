@@ -23,14 +23,14 @@ if __name__ == '__main__':
 
     os.system('touch fake-file')
 
-    assert exists(p) == True
-    assert file_exists(p) == True
+    assert exists(p) is True
+    assert file_exists(p) is True
 
     os.system('rm fake-file')
 
     os.system('mkdir fake-directory')
 
-    assert exists(d) == True
-    assert dir_exists(d) == True
+    assert exists(d) is True
+    assert dir_exists(d) is True
 
     os.system('rmdir fake-directory')
