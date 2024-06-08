@@ -21,3 +21,20 @@ def test_dir_exists(tmp_path):
     assert d.exists() is True
     assert dir_exists(d) is True
     assert d.is_dir() is True
+
+
+def test_exists_on_dir(tmp_path):
+    # create a temporary directory
+    d = tmp_path / 'test_dir'
+    d.mkdir()
+    assert exists(d) is True
+
+
+def test_exists_on_file(tmp_path):
+    # create a temporary file and write text into it
+    f = tmp_path / 'test.txt'
+    f.write_text('blah blah blah')
+
+    assert exists(f) is True
+    assert f.exists() is True
+    assert f.is_file() is True
